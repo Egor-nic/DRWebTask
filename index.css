@@ -28,7 +28,6 @@ img {
 button,
 input {
     font: inherit;
-    /* Чтобы формы использовали тот же шрифт, что и весь сайт */
 }
 
 .container {
@@ -46,7 +45,6 @@ input {
     font-weight: 600;
     font-style: Demi Bold;
     font-size: 18px;
-    leading-trim: NONE;
     line-height: 22px;
     letter-spacing: 0%;
     text-align: center;
@@ -56,8 +54,6 @@ input {
 .main_form {
     padding: 40px 24px;
     gap: 32px;
-    angle: 0 deg;
-    opacity: 1;
     border-radius: 15px;
 }
 
@@ -78,7 +74,6 @@ input {
     font-weight: 400;
     font-style: Regular;
     font-size: 14px;
-    leading-trim: NONE;
     line-height: 14px;
     letter-spacing: 0%;
     color: #666666;
@@ -87,8 +82,6 @@ input {
 .main_form-input {
     justify-content: space-between;
     padding: 10px 12px;
-    angle: 0 deg;
-    opacity: 1;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
 }
@@ -98,20 +91,15 @@ input {
     font-weight: 400;
     font-style: Regular;
     font-size: 14px;
-    leading-trim: NONE;
     line-height: 18px;
     letter-spacing: 0%;
-
     color: #D02224;
 }
 
 .main_form-email-worning {
     padding: 16px 24px;
     margin: 32px 0px;
-
     gap: 8px;
-    angle: 0 deg;
-    opacity: 1;
     background-color: #F8F8F8;
     border: 1px solid #D02224;
     border-radius: 10px;
@@ -123,6 +111,15 @@ input {
 
 .main_form-description-title {
     margin-bottom: 16px;
+    color: #B3B3B3;
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
 }
 
 .main_form-description-input-wrapper {
@@ -131,25 +128,75 @@ input {
     align-items: start;
 }
 
+.custom-checkbox {
+    display: flex;
+    align-items: start;
+    cursor: pointer;
+    gap: 8px;
+    font-family: sans-serif;
+}
+
+/* CSS for checkbox start*/
+.hidden-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.checkbox-view {
+    flex: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    position: relative;
+    background-color: white;
+}
+
+.hidden-checkbox:checked+.checkbox-view {
+    background-color: #69B42E;
+    border-color: #69B42E;
+}
+
+.checkbox-view::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s;
+    top: 0px;
+}
+
+.hidden-checkbox:checked+.checkbox-view::after {
+     opacity: 1;
+}
+/* CSS for checkbox start*/
+
 .main_form-button {
     width: 100%;
     min-width: 100px;
     max-height: 40px;
     padding: 12px 24px;
-    angle: 0 deg;
-    opacity: 1;
     background-color: #F8F8F8;
     color: #B3B3B3;
     font-family: Roboto;
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
-    leading-trim: NONE;
     line-height: 16px;
     letter-spacing: 0%;
     text-align: center;
     vertical-align: middle;
-
     border-radius: 5px;
     border: none;
 }

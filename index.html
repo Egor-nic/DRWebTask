@@ -97,16 +97,26 @@
                     <p class="main_form-description-title">Все поля обязательны для заполнения!</p>
 
                     <div class="main_form-description-input-wrapper">
-                        <input id="agreement" type="checkbox">
-                        <label for="agreement">Я даю согласие на обработку моих персональных данных в соответствии
+                        <!-- <input id="agreement" type="checkbox"> -->
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="hidden-checkbox">
+                            <span class="checkbox-view"></span>
+
+                            <span class="checkbox-text">
+                                Я даю согласие на обработку моих персональных данных в соответствии
+                                <a href="#">с Политикой конфиденциальности</a>
+                            </span>
+                        </label>
+
+                        <!-- <label for="agreement">Я даю согласие на обработку моих персональных данных в соответствии
                             <a href="#">с Политикой
                                 конфиденциальности</a>
-                        </label>
+                        </label> -->
                     </div>
 
                 </div>
 
-                <button class="main_form-button">Зарегистрироваться</button>
+                <button class="main_form-button" disabled>Зарегистрироваться</button>
             </form>
         </div>
     </main>
