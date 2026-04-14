@@ -4,113 +4,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
     <title>Dr.Web</title>
 </head>
 
 <body>
 
-    <header>
-        <a href="/" class="header_logo">
-            <img src="./images/icons/logo.svg" alt="logo">
-        </a>
+    <header class="header">
+        <div class="container">
 
-        <h1>Dr.Web VirLabConf <span>2.0</span></h1>
+            <a href="/" class="header_logo">
+                <img src="./images/icons/logo.svg" alt="logo">
+            </a>
 
-        <div>
-            <p>
-                Только для своих — <span>закрытая конференция </span>
-                антивирусной лаборатории Dr.Web. Идеальное место для
-                того, чтобы узнать
-                <span>о новейших киберугрозах</span>, их эволюции и способах защиты.
-            </p>
+            <h1>Dr.Web VirLabConf <span>2.0</span></h1>
 
+            <div>
+                <p>
+                    Только для своих — <span>закрытая конференция </span>
+                    антивирусной лаборатории Dr.Web. Идеальное место для
+                    того, чтобы узнать
+                    <span>о новейших киберугрозах</span>, их эволюции и способах защиты.
+                </p>
+
+            </div>
         </div>
     </header>
 
     <!--  -->
-    <main>
-
-        <div>
-            <button>Дата: 4 апреля 2025</button>
-            <button>Время: 10:30</button>
-
+    <main class="main container">
+        <div class="">
             <div>
-                <p>
-                    <span>
-                        Bolshevik Loft,
-                    </span>
-                    Ленинградский проспект, 15, стр. 1 (БЦ «Большевик»), г. Москва
-                </p>
+                <button>Дата: 4 апреля 2025</button>
+                <button>Время: 10:30</button>
+
+                <div>
+                    <p>
+                        <span>
+                            Bolshevik Loft,
+                        </span>
+                        Ленинградский проспект, 15, стр. 1 (БЦ «Большевик»), г. Москва
+                    </p>
+                </div>
             </div>
+
+            <a href="files/terms.pdf" download>
+                Программа мероприятия
+                <img src="./images/icons/downloadIcon.svg" alt="download icon">
+            </a>
+
+            <h2 class="main_form-title">Заполните форму регистрации</h2>
+            <form class="main_form" action="">
+                <div class="main_form-inputs-wrapper">
+                    <div class="main_form-item">
+                        <label class="main_form-label" for="name">Фамилия, Имя</label>
+                        <input class="main_form-input" id="name" type="text">
+                        <span class="main_form-input-error">Укажите данные</span>
+                    </div>
+
+                    <div class="main_form-item">
+                        <label class="main_form-label" for="ccmpany">Компания</label>
+                        <input class="main_form-input" id="ccmpany" type="text">
+                        <span class="main_form-input-error">Укажите данные</span>
+                    </div>
+
+                    <div class="main_form-item">
+                        <label class="main_form-label" for="positions">Должность</label>
+                        <input class="main_form-input" id="positions" type="text">
+                        <span class="main_form-input-error">Укажите данные</span>
+                    </div>
+
+                    <div class="main_form-item">
+                        <label class="main_form-label" for="email">E-mail</label>
+                        <input class="main_form-input" id="email" type="email">
+                        <span class="main_form-input-error">Укажите данные</span>
+                    </div>
+
+                    <div class="main_form-item">
+                        <label class="main_form-label" for="phone">Телефон</label>
+                        <input class="main_form-input" id="phone" type="number">
+                        <span class="main_form-input-error">Укажите данные</span>
+                    </div>
+                </div>
+
+
+                <div class="main_form-email-worning">
+                    <span>Обратите внимание на правильность указания адреса электронной почты: на него придет
+                        подтверждение
+                        регистрации.</span>
+                </div>
+                <div class="main_form-description">
+                    <p class="main_form-description-title">Все поля обязательны для заполнения!</p>
+
+                    <div class="main_form-description-input-wrapper">
+                        <input id="agreement" type="checkbox">
+                        <label for="agreement">Я даю согласие на обработку моих персональных данных в соответствии
+                            <a href="#">с Политикой
+                                конфиденциальности</a>
+                        </label>
+                    </div>
+
+                </div>
+
+                <button class="main_form-button">Зарегистрироваться</button>
+            </form>
         </div>
-
-        <a href="files/terms.pdf" download>
-            Программа мероприятия
-            <img src="./images/icons/downloadIcon.svg" alt="download icon">
-        </a>
-
-        <h2>Заполните форму регистрации</h2>
-        <form action="">
-            <div>
-                <div>
-                    <label for="name">Фамилия, Имя</label>
-                    <input id="name" type="text">
-                </div>
-
-                <div>
-                    <label for="ccmpany">Компания</label>
-                    <input id="ccmpany" type="text">
-                </div>
-
-                <div>
-                    <label for="positions">Должность</label>
-                    <input id="positions" type="text">
-                </div>
-
-                <div>
-                    <label for="email">E-mail</label>
-                    <input id="email" type="email">
-                </div>
-
-                <div>
-                    <label for="phone">Телефон</label>
-                    <input id="phone" type="number">
-                </div>
-            </div>
-
-
-            <div>
-                <span>Обратите внимание на правильность указания адреса электронной почты: на него придет подтверждение
-                    регистрации.</span>
-            </div>
-            <div>
-                <p>Все поля обязательны для заполнения!</p>
-
-                <input id="agreement" type="checkbox">
-                <label for="agreement">Я даю согласие на обработку моих персональных данных в соответствии с Политикой
-                    конфиденциальности</label>
-
-            </div>
-
-            <button>Зарегистрироваться</button>
-        </form>
     </main>
 
-    <section>
+    <section class="questions container">
+        <div class="">
 
-        <div>
-            <h3>Остались вопросы?</h3>
-            <p>Напишите нам
-                <a href="mailto: marketing@drweb.com class=" support-email"> marketing@drweb.com</a>.
-            </p>
+            <div>
+                <h3>Остались вопросы?</h3>
+                <p>Напишите нам
+                    <a href="mailto: marketing@drweb.com class=" support-email"> marketing@drweb.com</a>.
+                </p>
 
-            <img src="./images/heartImg.png" alt="heart img">
+                <img src="./images/heartImg.png" alt="heart img">
+            </div>
         </div>
 
     </section>
 
     <!--  -->
-    <footer>
+    <footer class="footer">
         <div>
             <ul>
                 <li>

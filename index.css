@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+    /* Убирает маркеры списков */
+}
+
+a {
+    text-decoration: none;
+    /* Убирает подчеркивание ссылок */
+    color: inherit;
+    /* Ссылка наследует цвет текста родителя */
+}
+
+img {
+    max-width: 100%;
+    /* Чтобы картинки не вылезали за края */
+    display: block;
+}
+
+button,
+input {
+    font: inherit;
+    /* Чтобы формы использовали тот же шрифт, что и весь сайт */
+}
+
+.container {
+    max-width: 805px;
+    padding: 0px 12px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 40px;
+}
+
+.main_form-title {
+    font-family: FreeSet;
+    font-weight: 600;
+    font-style: Demi Bold;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: center;
+    box-shadow: 0px 0px 15px 0px #FFFFFF26;
+}
+
+.main_form {
+    padding: 40px 24px;
+    gap: 32px;
+    angle: 0 deg;
+    opacity: 1;
+    border-radius: 15px;
+}
+
+.main_form-inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main_form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.main_form-label {
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    leading-trim: NONE;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: #666666;
+}
+
+.main_form-input {
+    justify-content: space-between;
+    padding: 10px 12px;
+    angle: 0 deg;
+    opacity: 1;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+.main_form-input-error {
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    leading-trim: NONE;
+    line-height: 18px;
+    letter-spacing: 0%;
+
+    color: #D02224;
+}
+
+.main_form-email-worning {
+    padding: 16px 24px;
+    margin: 32px 0px;
+
+    gap: 8px;
+    angle: 0 deg;
+    opacity: 1;
+    background-color: #F8F8F8;
+    border: 1px solid #D02224;
+    border-radius: 10px;
+}
+
+.main_form-description {
+    margin-bottom: 32px;
+}
+
+.main_form-description-title {
+    margin-bottom: 16px;
+}
+
+.main_form-description-input-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: start;
+}
+
+.main_form-button {
+    width: 100%;
+    min-width: 100px;
+    max-height: 40px;
+    padding: 12px 24px;
+    angle: 0 deg;
+    opacity: 1;
+    background-color: #F8F8F8;
+    color: #B3B3B3;
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 5px;
+    border: none;
+}
+
+.questions {
+    padding-bottom: 40px;
+}
+
+.footer {
+    padding: 48px 16px;
+}
