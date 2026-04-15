@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <!--  -->
     <main class="main">
 
@@ -59,41 +58,41 @@
             </div>
 
             <h2 class="main_form-title">Заполните форму регистрации</h2>
-            <form class="main_form" action="">
+            <form class="main_form" action="" id="registrationFrom">
                 <div class="main_form-inputs-wrapper">
                     <div class="main_form-item">
                         <label class="main_form-label" for="name">Фамилия, Имя</label>
-                        <input class="main_form-input" id="name" type="text">
-                        <span class="main_form-input-error">Укажите данные</span>
+                        <input class="main_form-input" id="name" name="name" type="text">
+                        <span class="main_form-input-error" id="name-error">Укажите данные</span>
                     </div>
 
                     <div class="main_form-item">
-                        <label class="main_form-label" for="ccmpany">Компания</label>
-                        <input class="main_form-input" id="ccmpany" type="text">
-                        <span class="main_form-input-error">Укажите данные</span>
+                        <label class="main_form-label" for="company">Компания</label>
+                        <input class="main_form-input"  id="company" type="text" name="company">
+                        <span class="main_form-input-error" id="company-error">Укажите данные</span>
                     </div>
 
                     <div class="main_form-item">
                         <label class="main_form-label" for="positions">Должность</label>
-                        <input class="main_form-input" id="positions" type="text">
-                        <span class="main_form-input-error">Укажите данные</span>
+                        <input class="main_form-input"  id="positions" name="positions" type="text">
+                        <span class="main_form-input-error" id="positions-error">Укажите данные</span>
                     </div>
 
                     <div class="main_form-item">
                         <label class="main_form-label" for="email">E-mail</label>
-                        <input class="main_form-input" id="email" type="email">
-                        <span class="main_form-input-error">Укажите данные</span>
+                        <input class="main_form-input"  id="email" name="email" type="email">
+                        <span class="main_form-input-error" id="email-error">Укажите данные</span>
                     </div>
 
                     <div class="main_form-item">
                         <label class="main_form-label" for="phone">Телефон</label>
-                        <input class="main_form-input" id="phone" type="number">
-                        <span class="main_form-input-error">Укажите данные</span>
+                        <input class="main_form-input"  id="phone" name="phone" type="number">
+                        <span class="main_form-input-error" id="phone-error">Укажите данные</span>
                     </div>
                 </div>
 
 
-                <div class="main_form-email-worning">
+                <div class="main_form-email-warning" id="warning_email_text">
                     <span>Обратите внимание на правильность указания адреса электронной почты: на него придет
                         подтверждение
                         регистрации.</span>
@@ -104,7 +103,7 @@
                     <div class="main_form-description-input-wrapper">
                         <!-- <input id="agreement" type="checkbox"> -->
                         <label class="custom-checkbox">
-                            <input type="checkbox" class="hidden-checkbox">
+                            <input type="checkbox" class="hidden-checkbox" id="mainFormCheckbox">
                             <span class="checkbox-view"></span>
 
                             <span class="checkbox-text">
@@ -121,7 +120,7 @@
 
                 </div>
 
-                <button class="main_form-button" disabled>Зарегистрироваться</button>
+                <button class="main_form-button" disabled id="submitFormButton">Зарегистрироваться</button>
             </form>
 
             <div class="contacts">
@@ -146,7 +145,6 @@
         </div>
 
     </main>
-
 
     <!--  -->
     <footer class="footer">
@@ -287,12 +285,12 @@
                             <a href="#">Обработка персональных данных</a>
                             <a href="#">Безопасная разработка и выпуск обновлений</a>
                         </li>
-                       
+
                         <li class="footer_caption-item-link">
                             <a href="#">Политика конфиденциальности</a>
                             <a href="#">Информация по требованиям Минцифры России</a>
                         </li>
-                    
+
                     </ul>
                 </li>
 
@@ -301,6 +299,7 @@
     </footer>
 
     <!-- <div class="popup">
+        
 
         <button class="popup_close-button">
             <img src="./images//icons/closeIcon.svg" alt="close icon">
@@ -312,6 +311,8 @@
         </div>
         <button class="popup_agree_button">Хорошо</button>
     </div> -->
+
+    <script src="./index.js"></script>
 </body>
 
 </html>

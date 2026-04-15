@@ -244,16 +244,17 @@ input {
 }
 
 .main_form-input-error {
+    display: none;
     font-family: Roboto;
     font-weight: 400;
-
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0%;
     color: #D02224;
 }
 
-.main_form-email-worning {
+.main_form-email-warning {
+    display: none;
     padding: 16px 24px;
     margin: 32px 0px;
     gap: 8px;
@@ -345,8 +346,8 @@ input {
     min-width: 100px;
     max-height: 40px;
     padding: 12px 24px;
-    background-color: #F8F8F8;
-    color: #B3B3B3;
+    background-color: #69B42E;
+    color: #FFFFFF;
     font-family: Roboto;
     font-weight: 400;
     font-size: 16px;
@@ -356,8 +357,15 @@ input {
     vertical-align: middle;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
+
+.main_form-button:disabled {
+    background-color: #F8F8F8;
+    color: #B3B3B3;
+    cursor: default;
+}
 .contacts {
     padding-bottom: 40px;
 }
