@@ -1,10 +1,10 @@
-const WARNING_EMAIL_TEXT = document.getElementById('warning_email_text');
+const WARNING_EMAIL_TEXT = document.getElementById('warningEmailText');
 
-const CHECKBOX = document.getElementById('mainFormCheckbox');
+const CHECKBOX = document.getElementById('agreementCheckbox');
 
 const SUBMIT_FORM_BUTTON = document.getElementById('submitFormButton');
 
-const FORM = document.querySelector('#registrationFrom');
+const FORM = document.querySelector('#registrationForm');
 
 const INPUTS = document.querySelectorAll('form input:not([type="checkbox"])');
 
@@ -26,7 +26,6 @@ INPUT_EMAIL.addEventListener('change', (event) => {
 
 const checkIsValidEmail = (value) => {
     console.log(value, "<------value====")
-    // Регулярное выражение для проверки email
     const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (emailRegExp.test(value)) {
@@ -59,10 +58,10 @@ const addErrorText = () => {
         console.log(errorTextId, '<--- errorTextId')
         if (!input.value.trim()) {
             EROOR_TEXT.style.display = 'block';
-            input.classList.add("main_form-input-error");
+            input.classList.add("form__input--error");
         } else {
             EROOR_TEXT.style.display = 'none';
-            input.classList.remove("main_form-input-error");
+            input.classList.remove("form__input--error");
         }
     }
 };

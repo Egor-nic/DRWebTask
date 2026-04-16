@@ -8,215 +8,201 @@
     <title>Dr.Web</title>
 </head>
 
-<body>
-    <!--  -->
-    <main class="main">
+<body class="page">
+    <main class="page__main event-page">
+        <span class="event-page__background-layer"></span>
+        <span class="event-page__blob event-page__blob--default"></span>
+        <span class="event-page__blob event-page__blob--variant-2"></span>
+        <span class="event-page__blob event-page__blob--variant-3"></span>
 
-
-        <span class="layer-extra"></span>
-        <div class="container">
-            <div class="main_logo">
-
-                <a href="/" class="header_logo">
+        <div class="event-page__container">
+            <div class="event-page__logo">
+                <a href="/" class="event-page__logo-link">
                     <img src="./images/icons/logo.svg" alt="logo">
                 </a>
             </div>
 
-            <div class="main_header">
+            <section class="event-page__hero hero">
+                <div class="hero__content">
+                    <div class="hero__title-group">
+                        <h1 class="hero__title">Dr.Web VirLabConf <span class="hero__title-accent">2.0</span></h1>
 
-                <div class="main_header-title-wrapper">
-
-                    <h1 class="main_header-title">Dr.Web VirLabConf <span>2.0</span></h1>
-
-                    <p class="main_header-text">
-                        Только для своих — <span>закрытая конференция </span>
-                        антивирусной лаборатории Dr.Web. Идеальное место для
-                        того, чтобы узнать
-                        <span>о новейших киберугрозах</span>, их эволюции и способах защиты.
-                    </p>
-                </div>
-
-                <div class="main_header-info-wrapper">
-
-                    <div class="main_header-info-buttons-wrapper">
-                        <div class="main_header-info-button">Дата: 4 апреля 2025</div>
-                        <div class="main_header-info-button">Время: 10:30</div>
-                    </div>
-
-
-                    <p class="main_header-info-text">
-                        <span>
-                            Bolshevik Loft,
-                        </span>
-                        Ленинградский проспект, 15, стр. 1 (БЦ «Большевик»), г. Москва
-                    </p>
-
-                </div>
-
-                <a class="main_header-prgramm-link" href="files/terms.pdf" download>
-                    Программа мероприятия
-                    <img src="./images/icons/downloadIcon.svg" alt="download icon">
-                </a>
-            </div>
-
-            <h2 class="main_form-title">Заполните форму регистрации</h2>
-            <form class="main_form" action="" id="registrationFrom">
-                <div class="main_form-inputs-wrapper">
-                    <div class="main_form-item">
-                        <label class="main_form-label" for="name">Фамилия, Имя</label>
-                        <input class="main_form-input" id="name" name="name" type="text">
-                        <span class="main_form-input-error-text" id="name-error">Укажите данные</span>
-                    </div>
-
-                    <div class="main_form-item">
-                        <label class="main_form-label" for="company">Компания</label>
-                        <input class="main_form-input" id="company" type="text" name="company">
-                        <span class="main_form-input-error-text" id="company-error">Укажите данные</span>
-                    </div>
-
-                    <div class="main_form-item">
-                        <label class="main_form-label" for="positions">Должность</label>
-                        <input class="main_form-input" id="positions" name="positions" type="text">
-                        <span class="main_form-input-error-text" id="positions-error">Укажите данные</span>
-                    </div>
-
-                    <div class="main_form-item">
-                        <label class="main_form-label" for="email">E-mail</label>
-                        <input class="main_form-input" id="email" name="email" type="text">
-                        <span class="main_form-input-error-text" id="email-error">Укажите данные</span>
-                    </div>
-
-                    <div class="main_form-item">
-                        <label class="main_form-label" for="phone">Телефон</label>
-                        <input class="main_form-input" id="phone" name="phone" type="text" maxlength="12">
-                        <span class="main_form-input-error-text" id="phone-error">Укажите данные</span>
-                    </div>
-                </div>
-
-
-                <div class="main_form-email-warning" id="warning_email_text">
-                    <span>Обратите внимание на правильность указания адреса электронной почты: на него придет
-                        подтверждение
-                        регистрации.</span>
-                </div>
-                <div class="main_form-description">
-                    <p class="main_form-description-title">Все поля обязательны для заполнения!</p>
-
-                    <div class="main_form-description-input-wrapper">
-                        <!-- <input id="agreement" type="checkbox"> -->
-                        <label class="custom-checkbox">
-                            <input type="checkbox" class="hidden-checkbox" id="mainFormCheckbox">
-                            <span class="checkbox-view"></span>
-
-                            <span class="main_form-checkbox-text">
-                                Я даю согласие на обработку моих персональных данных в соответствии с
-                                <a class="main_form-checkbox-link" href="#">Политикой конфиденциальности</a>
-                            </span>
-                        </label>
-
-                        <!-- <label for="agreement">Я даю согласие на обработку моих персональных данных в соответствии
-                                <a href="#">с Политикой
-                                    конфиденциальности</a>
-                            </label> -->
-                    </div>
-
-                </div>
-
-                <button class="main_form-button" disabled id="submitFormButton">Зарегистрироваться</button>
-            </form>
-
-            <div class="contacts">
-                <div class="contacts-wrapper">
-
-                    <div class="contacts-email">
-                        <h3 class="contacts-email-title">Остались вопросы?</h3>
-                        <p class="contacts-email-text">Напишите нам
-                            <a class="contacts-email-link" href="mailto: marketing@drweb.com class=" support-email">
-                                marketing@drweb.com</a>
+                        <p class="hero__text">
+                            Только для своих — <span class="hero__text-accent">закрытая конференция </span>
+                            антивирусной лаборатории Dr.Web. Идеальное место для
+                            того, чтобы узнать
+                            <span class="hero__text-accent">о новейших киберугрозах</span>, их эволюции и способах
+                            защиты.
                         </p>
-
                     </div>
-                    <div class="contacts-img-container">
-                        <div class="contacts-img-wrapper">
-                            <img class="contacts-img" src="./images/heartImg2.png" alt="heart img">
+
+                    <div class="hero__info-wrapper">
+
+                        <div class="hero__info">
+                            <div class="hero__buttons">
+                                <div class="hero__info-button">Дата: 4 апреля 2025</div>
+                                <div class="hero__info-button">Время: 10:30</div>
+                            </div>
+
+                            <p class="hero__info-text">
+                                <span class="hero__info-text-accent">Bolshevik Loft,</span>
+                                Ленинградский проспект, 15, стр. 1 (БЦ «Большевик»), г. Москва
+                            </p>
+                        </div>
+
+                        <a class="hero__program-link" href="files/terms.pdf" download>
+                            Программа мероприятия
+                            <img src="./images/icons/downloadIcon.svg" alt="download icon">
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="event-page__registration registration">
+                <h2 class="registration__title">Заполните форму регистрации</h2>
+
+                <form class="registration__form form" action="" id="registrationForm">
+                    <div class="form__inputs">
+                        <div class="form__field">
+                            <label class="form__label" for="name">Фамилия, имя</label>
+                            <input class="form__input" id="name" name="name" type="text">
+                            <span class="form__error" id="name-error">Укажите данные</span>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="company">Компания</label>
+                            <input class="form__input" id="company" type="text" name="company">
+                            <span class="form__error" id="company-error">Укажите данные</span>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="position">Должность</label>
+                            <input class="form__input" id="position" name="position" type="text">
+                            <span class="form__error" id="position-error">Укажите данные</span>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="email">E-mail</label>
+                            <input class="form__input" id="email" name="email" type="text">
+                            <span class="form__error" id="email-error">Укажите данные</span>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="phone">Телефон</label>
+                            <input class="form__input" id="phone" name="phone" type="text" maxlength="12">
+                            <span class="form__error" id="phone-error">Укажите данные</span>
+                        </div>
+                    </div>
+
+                    <div class="form__email-warning" id="warningEmailText">
+                        <span>
+                            Обратите внимание на правильность указания адреса электронной почты: на него придет
+                            подтверждение регистрации.
+                        </span>
+                    </div>
+
+                    <div class="form__description">
+                        <p class="form__description-title">Все поля обязательны для заполнения!</p>
+
+                        <div class="form__checkbox-row">
+                            <label class="checkbox" for="agreementCheckbox">
+                                <input type="checkbox" class="checkbox__input" id="agreementCheckbox">
+                                <span class="checkbox__view"></span>
+
+                                <span class="checkbox__text">
+                                    Я даю согласие на обработку моих персональных данных в соответствии с
+                                    <a class="checkbox__link" href="#">Политикой конфиденциальности</a>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="form__submit-button" disabled id="submitFormButton">Зарегистрироваться</button>
+                </form>
+            </section>
+
+            <section class="event-page__contacts contacts">
+                <div class="contacts__wrapper">
+                    <div class="contacts__content">
+                        <h3 class="contacts__title">Остались вопросы?</h3>
+                        <p class="contacts__text">
+                            Напишите нам
+                            <a class="contacts__link" href="mailto:marketing@drweb.com">marketing@drweb.com</a>
+                        </p>
+                    </div>
+
+                    <div class="contacts__image-container">
+                        <div class="contacts__image-wrapper">
+                            <img class="contacts__image" src="./images/heartImg2.png" alt="heart img">
                         </div>
                     </div>
                 </div>
-
-            </div>
+            </section>
         </div>
-
-
     </main>
 
-    <!--  -->
     <footer class="footer">
-        <div class="footer-caption-wrapper">
-            <ul class="footer_link-info-list">
-                <li class="footer_link-info-item">
+        <div class="footer__container">
+            <ul class="footer__info-list">
+                <li class="footer__info-item">
                     <a href="">Для дома</a>
                 </li>
-                <li class="footer_link-info-item">
+                <li class="footer__info-item">
                     <a href="">Для бизнеса</a>
                 </li>
-                <li class="footer_link-info-item">
+                <li class="footer__info-item">
                     <a href="#">Поддержка</a>
                 </li>
-                <li class="footer_link-info-item">
+                <li class="footer__info-item">
                     <a href="#">Пользователям</a>
                 </li>
-                <li class="footer_link-info-item">
+                <li class="footer__info-item">
                     <a href="#">Партнерам</a>
                 </li>
-                <li class="footer_link-info-item">
+                <li class="footer__info-item">
                     <a href="#">О компании</a>
                 </li>
-                <li class="footer_link-info-item">
+                <li class="footer__info-item">
                     <a href="#">Контакты</a>
                 </li>
-                <li class="footer_link-info-item">
+                <li class="footer__info-item">
                     <a href="#">Вакансии</a>
                 </li>
 
-                <li class="isShowLaptop">
-                    <ul class="footer_icons-list">
-                        <li>
+                <li class="footer__socials footer__socials--desktop">
+                    <ul class="footer__icons-list">
+                        <li class="footer__icon-item">
                             <a href="#">
                                 <img src="./images//icons/Telegram.svg" alt="Telegram icon">
                             </a>
                         </li>
-
-                        <li>
+                        <li class="footer__icon-item">
                             <a href="#">
                                 <img src="./images//icons/VK.svg" alt="vk icon">
                             </a>
                         </li>
-
-                        <li>
+                        <li class="footer__icon-item">
                             <a href="#">
                                 <img src="./images/icons/Yandex_Zen.svg" alt="Yandex_Zen icon">
                             </a>
                         </li>
-
-                        <li>
+                        <li class="footer__icon-item">
                             <a href="#">
-                                <img src="./images/icons/habr.svg" alt=" habr icon">
+                                <img src="./images/icons/habr.svg" alt="habr icon">
                             </a>
                         </li>
-
-                        <li>
+                        <li class="footer__icon-item">
                             <a href="#">
                                 <img src="./images//icons/YouTube.svg" alt="YouTube icon">
                             </a>
                         </li>
-
-                        <li>
+                        <li class="footer__icon-item">
                             <a href="#">
                                 <img src="./images/icons/RUTUBE.svg" alt="RUTUBE icon">
                             </a>
                         </li>
-
-                        <li>
+                        <li class="footer__icon-item">
                             <a href="#">
                                 <img src="./images/icons/Odnoklassniki.svg" alt="Odnoklassniki icon">
                             </a>
@@ -225,95 +211,71 @@
                 </li>
             </ul>
 
-            <ul class="footer_icons-list isMobile">
-                <li>
+            <ul class="footer__icons-list footer__icons-list--mobile">
+                <li class="footer__icon-item">
                     <a href="#">
                         <img src="./images//icons/Telegram.svg" alt="Telegram icon">
                     </a>
                 </li>
-
-                <li>
+                <li class="footer__icon-item">
                     <a href="#">
                         <img src="./images//icons/VK.svg" alt="vk icon">
                     </a>
                 </li>
-
-                <li>
+                <li class="footer__icon-item">
                     <a href="#">
                         <img src="./images/icons/Yandex_Zen.svg" alt="Yandex_Zen icon">
                     </a>
                 </li>
-
-                <li>
+                <li class="footer__icon-item">
                     <a href="#">
-                        <img src="./images/icons/habr.svg" alt=" habr icon">
+                        <img src="./images/icons/habr.svg" alt="habr icon">
                     </a>
                 </li>
-
-                <li>
+                <li class="footer__icon-item">
                     <a href="#">
                         <img src="./images//icons/YouTube.svg" alt="YouTube icon">
                     </a>
                 </li>
-
-                <li>
+                <li class="footer__icon-item">
                     <a href="#">
                         <img src="./images/icons/RUTUBE.svg" alt="RUTUBE icon">
                     </a>
                 </li>
-
-                <li>
+                <li class="footer__icon-item">
                     <a href="#">
                         <img src="./images/icons/Odnoklassniki.svg" alt="Odnoklassniki icon">
                     </a>
                 </li>
             </ul>
 
-            <ul class="footer_caption-list">
-                <li class="footer_caption-item">
-                    <div class="footer_caption">
+            <ul class="footer__caption-list">
+                <li class="footer__caption-item">
+                    <div class="footer__caption">
                         <img src="./images/trademark_drweb_1 1.png" alt="изображение логотипа">
                         <span>© «Доктор Веб» 2003–2025</span>
                     </div>
-                    <p> «Доктор Веб» — российский производитель антивирусных средств защиты информации под маркой
-                        Dr.Web.</p>
+                    <p>
+                        «Доктор Веб» — российский производитель антивирусных средств защиты информации под маркой
+                        Dr.Web.
+                    </p>
                 </li>
 
-
-                <li>
-
-                    <ul class="footer_caption-link-list">
-
-                        <li class="footer_caption-item-link">
+                <li class="footer__caption-item">
+                    <ul class="footer__caption-link-list">
+                        <li class="footer__caption-link-item">
                             <a href="#">Обработка персональных данных</a>
                             <a href="#">Безопасная разработка и выпуск обновлений</a>
                         </li>
-
-                        <li class="footer_caption-item-link">
+                        <li class="footer__caption-link-item">
                             <a href="#">Политика конфиденциальности</a>
                             <a href="#">Информация по требованиям Минцифры России</a>
                         </li>
-
                     </ul>
                 </li>
-
             </ul>
         </div>
     </footer>
-
-    <!-- <div class="popup">
-        
-
-        <button class="popup_close-button">
-            <img src="./images//icons/closeIcon.svg" alt="close icon">
-        </button>
-
-        <div class="popup_content">
-            <h2 class="popup_title">Что-то пошло не так</h2>
-            <p class="popup_text">Перезагрузите страницу или зайдите позже.</p>
-        </div>
-        <button class="popup_agree_button">Хорошо</button>
-    </div> -->
 
     <script src="./index.js"></script>
 </body>
