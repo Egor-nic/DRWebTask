@@ -37,15 +37,66 @@ input {
 }
 
 .main {
+    position: relative;
     padding-top: 40px;
-    background-image: url('./images/defaultBg.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    /* background: #5FD900; */
-    /* background: radial-gradient(57.86% 58.15% at 50% 50%, #000000 31.95%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(180deg, rgba(26, 26, 26, 0) 85%, #1A1A1A 100%); */
+    /* СЛОЙ 0: Основная картинка + градиенты (база) */
+   background: 
+        /* 1. Верхний слой: Затемняющий линейный градиент */
+        linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(26, 26, 26, 0.9) 100%),
+        
+        /* 2. Средний слой: Радиальный градиент (акцент в центре) */
+        radial-gradient(circle, rgba(95, 217, 0, 0.3) 0%, transparent 70%),
+        
+        /* 3. Нижний слой: Ваша картинка */
+        url('./images/BgImg.jpg') center/cover no-repeat;
+}
 
+/* Общие стили для всех трех накладываемых слоев */
+.main::before,
+.main::after,
+.layer-extra {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    /* Общая анимация на 9 секунд */
+    animation: bgFadeThree 9s infinite; 
+}
+
+/* СЛОЙ 1 */
+.main::before {
+    background-image: url('./images/bg2.png');
+    animation-delay: 0s;
+}
+
+/* СЛОЙ 2 */
+.main::after {
+    background-image: url('./images/bg3.png');
+    animation-delay: 3s; /* Появляется через 3 сек */
+}
+
+/* СЛОЙ 3 */
+.layer-extra {
+    background-image: url('./images/bf4.png');
+    animation-delay: 6s; /* Появляется через 6 сек */
+}
+
+/* Анимация: плавно появляется, держится и исчезает к концу цикла */
+@keyframes bgFadeThree {
+    0% { opacity: 0; }
+    10% { opacity: 1; }  /* Быстрое появление */
+    30% { opacity: 1; }  /* Держится */
+    40% { opacity: 0; }  /* Исчезает */
+    100% { opacity: 0; } /* Спит до конца общего цикла */
+}
+
+/* Контент всегда сверху */
+.main > .container {
+    position: relative;
+    z-index: 2;
 }
 
 .main_logo {
@@ -190,7 +241,7 @@ input {
     letter-spacing: 0%;
     text-align: center;
     vertical-align: middle;
-
+    cursor: pointer;
 }
 
 .main_form-title {
@@ -345,7 +396,11 @@ input {
     opacity: 1;
 }
 
-/* CSS for checkbox start*/
+.main_form-checkbox-link {
+    text-decoration: underline;
+}
+
+/* CSS for checkbox end*/
 
 .main_form-button {
     width: 100%;
@@ -372,6 +427,7 @@ input {
     color: #B3B3B3;
     cursor: default;
 }
+
 .contacts {
     padding-bottom: 40px;
 }
@@ -701,3 +757,8 @@ input {
     }
 
 }
+
+/* тест фона */
+
+
+/* Общие стили для слоев №2 и №3 */
