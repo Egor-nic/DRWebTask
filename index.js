@@ -12,6 +12,26 @@ const INPUT_EMAIL = document.getElementById('email');
 
 const INPUT_PHONE = document.getElementById('phone');
 
+const POPUP = document.getElementById('errorPopup');
+
+const POPUP_CLOSE_BUTTON = document.querySelector('.popup__close-button');
+
+const POPUP_AGREE_BUTTON = document.querySelector('.popup__agree-button');
+
+const PAGE = document.querySelector('.page');
+
+let isSubmitting = false;
+
+const openPopup = () => {
+    POPUP.classList.remove('is-hidden');
+    PAGE.classList.add('page--popup-open');
+};
+
+const closePopup = () => {
+    POPUP.classList.add('is-hidden');
+    PAGE.classList.remove('page--popup-open');
+};
+
 INPUT_EMAIL.addEventListener('change', (event) => {
 
     const value = event.target.value;
@@ -25,7 +45,6 @@ INPUT_EMAIL.addEventListener('change', (event) => {
 });
 
 const checkIsValidEmail = (value) => {
-    console.log(value, "<------value====")
     const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (emailRegExp.test(value)) {
@@ -55,7 +74,6 @@ const addErrorText = () => {
         const errorTextId = input.id;
         const EROOR_TEXT = document.getElementById(`${errorTextId}-error`);
 
-        console.log(errorTextId, '<--- errorTextId')
         if (!input.value.trim()) {
             EROOR_TEXT.style.display = 'block';
             input.classList.add("form__input--error");
@@ -78,6 +96,10 @@ const checkIsEmtyInputValue = () => {
 FORM.addEventListener('submit', (event) => {
     event.preventDefault();
 
+    if (isSubmitting) {
+        return;
+    }
+
     const isCheckIsEmtyInputValue = checkIsEmtyInputValue();
 
     const emailInputValue = INPUT_EMAIL.value;
@@ -87,13 +109,19 @@ FORM.addEventListener('submit', (event) => {
     if (!isCheckIsEmtyInputValue) {
 
         if (!isValidEmail) {
-            alert("Введен не корпектный email");
+            alert("Введен некорректный email");
         } else {
+            isSubmitting = true;
+            SUBMIT_FORM_BUTTON.disabled = true;
 
-            alert('the form submit')
+            setTimeout(() => {
+                openPopup();
+                isSubmitting = false;
+                SUBMIT_FORM_BUTTON.disabled = !CHECKBOX.checked;
+            }, 1200);
         }
     } else {
-        return
+        return;
     }
 });
 
@@ -116,4 +144,19 @@ INPUT_PHONE.addEventListener('input', (event) => {
     value = value.slice(0, 11); // Ограничение 11 цифр
     event.target.value = '+' + value;
 
+});
+
+POPUP_CLOSE_BUTTON.addEventListener('click', closePopup);
+POPUP_AGREE_BUTTON.addEventListener('click', closePopup);
+
+POPUP.addEventListener('click', (event) => {
+    if (event.target === POPUP) {
+        closePopup();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !POPUP.classList.contains('is-hidden')) {
+        closePopup();
+    }
 });

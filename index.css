@@ -61,20 +61,24 @@
         from {
             transform: translate(-50%, -50%) rotate(0deg);
         }
+
         to {
             transform: translate(-50%, -50%) rotate(360deg);
         }
     }
 
     @keyframes event-page-blobs {
+
         0%,
         100% {
             opacity: 0;
         }
+
         10%,
         30% {
             opacity: 0.55;
         }
+
         40% {
             opacity: 0;
         }
@@ -150,6 +154,7 @@
         40% {
             opacity: 0.9;
         }
+
         43%,
         100% {
             opacity: 0;
@@ -162,10 +167,12 @@
         55% {
             opacity: 0;
         }
+
         65%,
         80% {
             opacity: 0.8;
         }
+
         90%,
         100% {
             opacity: 0;
@@ -307,7 +314,7 @@
         min-height: 48px;
         max-height: 48px;
         max-width: 311px;
-        padding: 8px 16px 8px 24px;
+        padding: 8px 14px 8px 22px;
         gap: 8px;
         border-radius: 5px;
         border-width: 2px;
@@ -726,6 +733,11 @@
             justify-content: space-between;
             gap: 24px;
         }
+
+        .popup__panel {
+            padding: 48px 64px;
+
+        }
     }
 
     @media (min-width: 1280px) {
@@ -755,4 +767,80 @@
             grid-template-columns: 1fr 1fr;
             gap: 32px;
         }
+    }
+
+    .popup {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+    .popup.is-hidden {
+        display: none;
+    }
+
+    .page--popup-open {
+        overflow: hidden;
+    }
+
+
+    .popup__panel {
+        position: relative;
+        width: 100%;
+        max-width: 568px;
+        padding: 48px 12px 24px 12px;
+        border-radius: 15px;
+        background-color: #ffffff;
+        color: #000000;
+
+    }
+
+    .popup__close-button {
+        position: absolute;
+        right: 16px;
+        top: 24px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .popup__content {
+        margin-bottom: 32px;
+    }
+
+    .popup__title {
+        margin-bottom: 16px;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .popup__text {
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .popup__agree-button {
+        width: 100%;
+        min-height: 40px;
+        padding: 12px 24px;
+        border: 0;
+        border-radius: 5px;
+        background-color: #69B42E;
+        color: #FFFFFF;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        cursor: pointer;
     }
