@@ -244,6 +244,11 @@ input {
 }
 
 .main_form-input-error {
+    border: 1px solid #D02224;
+
+}
+
+.main_form-input-error-text {
     display: none;
     font-family: Roboto;
     font-weight: 400;
@@ -269,6 +274,7 @@ input {
 
 .main_form-description-title {
     margin-bottom: 16px;
+    margin-top: 32px;
     color: #B3B3B3;
     font-family: Roboto;
     font-weight: 400;
