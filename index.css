@@ -334,19 +334,12 @@
         line-height: 24px;
         letter-spacing: 0%;
         border-radius: 100px;
-
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14)),
             linear-gradient(101.59deg, rgba(255, 255, 255, 0.2) 12.49%, rgba(255, 255, 255, 0) 58.51%);
         border: 1px solid;
-
         border-image-source: linear-gradient(125.12deg, rgba(255, 255, 255, 0.64) -8.44%, rgba(255, 255, 255, 0) 83.93%);
-
         box-shadow: 0px 4px 7px 0px #0000000D;
-
         backdrop-filter: blur(36px);
-
-        
-
     }
 
     .hero__info-text {
